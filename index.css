@@ -322,9 +322,10 @@ img, svg {
 }
 
 .nav-logo img {
-  height: 150px;
+  height: 100px;
   width: auto;
   object-fit: contain;
+  mix-blend-mode: multiply;
 }
 
 .nav-links {
@@ -719,6 +720,10 @@ body.no-scroll {
 
   .hamburger {
     display: block;
+  }
+
+  .nav-logo img {
+    height: 60px;
   }
 
   .footer-grid {
