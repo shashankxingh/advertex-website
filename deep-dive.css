@@ -1,0 +1,125 @@
+/* =========================================
+   SPOKE PAGES (DEEP DIVES) STYLES
+   ========================================= */
+
+.deep-dive-hero {
+  padding-top: 180px;
+  padding-bottom: var(--space-12);
+  background: var(--c-bg);
+  text-align: center;
+  border-bottom: 1px solid var(--c-gray-200);
+}
+
+.deep-dive-hero h1 {
+  font-size: 3rem;
+  color: var(--c-navy);
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.02em;
+}
+
+.deep-dive-content-wrapper {
+  padding: var(--space-20) 0;
+}
+
+.deep-dive-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: flex-start;
+}
+
+.deep-dive-text h2 {
+  font-size: 2rem;
+  color: var(--c-navy);
+  margin-bottom: var(--space-6);
+}
+
+.deep-dive-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--c-gray-700);
+  margin-bottom: var(--space-6);
+}
+
+.deep-dive-twist {
+  background: rgba(27, 111, 239, 0.05);
+  border-left: 4px solid var(--c-blue);
+  padding: var(--space-6);
+  margin: var(--space-8) 0;
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+}
+
+.deep-dive-twist h4 {
+  color: var(--c-blue);
+  margin-bottom: var(--space-2);
+  font-size: 1.1rem;
+}
+
+.real-life-example {
+  background: var(--c-navy);
+  color: var(--c-white);
+  padding: var(--space-8);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.real-life-example::before {
+  content: 'CASE STUDY';
+  position: absolute;
+  top: 20px;
+  right: -30px;
+  background: var(--c-blue);
+  color: var(--c-white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 30px;
+  transform: rotate(45deg);
+  letter-spacing: 0.1em;
+}
+
+.real-life-example h4 {
+  color: var(--c-white);
+  font-size: 1.5rem;
+  margin-bottom: var(--space-4);
+}
+
+.real-life-example p {
+  color: var(--c-gray-300);
+  font-size: 1.05rem;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.example-metric {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 16px;
+  border-radius: 20px;
+  color: #4CAF50;
+  font-weight: 700;
+  margin-top: var(--space-6);
+  font-size: 1.1rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--c-blue);
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: var(--space-8);
+  transition: transform var(--transition-fast);
+}
+
+.back-link:hover {
+  transform: translateX(-5px);
+}
+
+@media (max-width: 992px) {
+  .deep-dive-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,252 @@
+/* =========================================
+   ABOUT PAGE SPECIFIC STYLES
+   ========================================= */
+
+/* Hero Section */
+.about-hero {
+  padding-top: 240px;
+  padding-bottom: var(--space-12);
+  background: var(--c-bg);
+  text-align: center;
+}
+
+.about-hero .section-title {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-hero .section-subtitle {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Story Section */
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.story-content p {
+  color: var(--c-gray-600);
+  margin-bottom: var(--space-6);
+  font-size: 1.1rem;
+}
+
+.story-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.stat-item {
+  background: var(--c-white);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--c-gray-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--c-primary);
+  margin-bottom: var(--space-2);
+}
+
+.stat-label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--c-navy);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Founders Section - Concise Bios */
+.founders-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  margin-top: var(--space-8);
+}
+
+.founder-bio-card {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: var(--space-12);
+  background: var(--c-white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--c-gray-200);
+}
+
+.founder-image {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  background: var(--c-gray-100);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.founder-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(var(--c-primary) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.1;
+}
+
+.founder-icon {
+  width: 64px;
+  height: 64px;
+  color: var(--c-gray-400);
+  z-index: 1;
+}
+
+.founder-info {
+  padding: var(--space-12) var(--space-12) var(--space-12) 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.founder-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--c-navy);
+  margin-bottom: var(--space-2);
+}
+
+.founder-role {
+  color: var(--c-primary);
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-4);
+  display: block;
+}
+
+.founder-edu {
+  display: inline-block;
+  background: var(--c-gray-100);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--c-gray-600);
+  margin-bottom: var(--space-6);
+}
+
+.founder-bio-text {
+  color: var(--c-gray-600);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: var(--space-8);
+}
+
+.founder-expertise {
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--c-gray-200);
+}
+
+.founder-expertise h4 {
+  font-size: var(--text-sm);
+  color: var(--c-navy);
+  margin-bottom: var(--space-3);
+  font-weight: 700;
+}
+
+.expertise-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.expertise-tag {
+  display: inline-block;
+  background: var(--c-gray-100);
+  color: var(--c-navy);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--c-gray-200);
+  transition: all 0.2s ease;
+}
+
+.expertise-tag:hover {
+  background: var(--c-white);
+  border-color: var(--c-primary);
+  color: var(--c-primary);
+}
+
+/* Blog / Manifesto Section */
+.blog-article {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.blog-article h3 {
+  font-size: 2rem;
+  color: var(--c-navy);
+  margin-top: var(--space-12);
+  margin-bottom: var(--space-6);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.blog-article p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--c-gray-700);
+  margin-bottom: var(--space-6);
+}
+
+.blog-article blockquote {
+  border-left: 4px solid var(--c-primary);
+  padding-left: var(--space-6);
+  margin: var(--space-8) 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--c-navy);
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .story-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .founder-bio-card {
+    grid-template-columns: 1fr;
+  }
+  
+  .founder-info {
+    padding: var(--space-8);
+  }
+  
+  .founder-image {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    padding-top: 200px;
+  }
+}

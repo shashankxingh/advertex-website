@@ -1,0 +1,192 @@
+/* ==========================================================================
+   LOGIN PORTAL STYLES (login.css)
+   Phase 6: Authentication & Client Portal
+   ========================================================================== */
+
+/* Body override for login page */
+.login-body {
+  background-color: var(--c-navy);
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(27, 111, 239, 0.08), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(27, 111, 239, 0.12), transparent 25%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  font-family: var(--font-main);
+}
+
+.login-container {
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-logo {
+  margin-bottom: var(--space-8);
+  display: inline-block;
+  transition: transform var(--transition-fast);
+}
+
+.login-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Glassmorphism Card */
+.login-card {
+  background: rgba(255, 255, 255, 1);
+  width: 100%;
+  border-radius: var(--radius-lg);
+  padding: var(--space-10) var(--space-8);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.login-card h2 {
+  font-size: 1.75rem;
+  color: var(--c-navy);
+  margin-bottom: var(--space-2);
+  text-align: center;
+}
+
+.login-subtitle {
+  color: var(--c-gray-500);
+  text-align: center;
+  margin-bottom: var(--space-8);
+  font-size: 0.95rem;
+}
+
+/* Role Selector Tabs */
+.role-selector {
+  display: flex;
+  background: var(--c-gray-50);
+  border-radius: var(--radius-md);
+  padding: 4px;
+  margin-bottom: var(--space-8);
+  border: 1px solid var(--c-gray-200);
+}
+
+.role-btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: var(--space-2) 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--c-gray-500);
+  border-radius: calc(var(--radius-md) - 2px);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.role-btn:hover {
+  color: var(--c-navy);
+}
+
+.role-btn.active {
+  background: var(--c-white);
+  color: var(--c-blue);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Form Styles */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-6);
+  margin-top: -var(--space-2);
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.85rem;
+  color: var(--c-gray-600);
+  cursor: pointer;
+}
+
+.remember-me input[type="checkbox"] {
+  accent-color: var(--c-blue);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.forgot-password {
+  font-size: 0.85rem;
+  color: var(--c-blue);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.forgot-password:hover {
+  color: var(--c-navy);
+}
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: var(--space-6) 0;
+  color: var(--c-gray-400);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--c-gray-200);
+}
+
+.divider span {
+  padding: 0 var(--space-3);
+}
+
+/* Google Button */
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  background-color: var(--c-white);
+  color: var(--c-navy);
+  font-weight: 600;
+}
+
+.google-btn:hover {
+  background-color: var(--c-gray-50);
+}
+
+/* Signup Prompt */
+.signup-prompt {
+  text-align: center;
+  margin-top: var(--space-6);
+  font-size: 0.9rem;
+  color: var(--c-gray-600);
+}
+
+.signup-prompt a {
+  color: var(--c-blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup-prompt a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.login-footer {
+  margin-top: var(--space-8);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  text-align: center;
+}
