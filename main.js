@@ -213,34 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // =========================================
-  // 8. CONTACT FORM HANDLING
-  // =========================================
-  const contactForm = document.getElementById('contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
 
-      const submitBtn = contactForm.querySelector('button[type="submit"]');
-      const originalText = submitBtn.textContent;
-
-      submitBtn.textContent = 'Sending...';
-      submitBtn.disabled = true;
-
-      // Simulate sending (replace with real backend later)
-      setTimeout(() => {
-        submitBtn.textContent = 'Sent! ✓';
-        submitBtn.style.backgroundColor = 'var(--c-success)';
-
-        setTimeout(() => {
-          submitBtn.textContent = originalText;
-          submitBtn.disabled = false;
-          submitBtn.style.backgroundColor = '';
-          contactForm.reset();
-        }, 2500);
-      }, 1500);
-    });
-  }
 
   // =========================================
   // 9. FAQ ACCORDION
