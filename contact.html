@@ -165,7 +165,7 @@
 
           <!-- ================= FORM ================= -->
           <!-- Using Web3Forms to send emails directly to advertexstudio@gmail.com for free without backend -->
-          <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
             
             <!-- Web3Forms Configuration -->
             <input type="hidden" name="access_key" value="6182fc88-04a7-4f98-a3c0-a2e05ede780e">
@@ -177,10 +177,12 @@
               <div class="form-group">
                 <label for="name" class="form-label">Full Name *</label>
                 <input type="text" id="name" name="Name" class="form-control" placeholder="John Doe" required>
+                <div class="form-error" id="name-error">This field is required</div>
               </div>
               <div class="form-group">
                 <label for="email" class="form-label">Email Address *</label>
                 <input type="email" id="email" name="Email" class="form-control" placeholder="john@example.com" required>
+                <div class="form-error" id="email-error">Please enter a valid email</div>
               </div>
             </div>
             
@@ -188,6 +190,7 @@
               <div class="form-group">
                 <label for="phone" class="form-label">Phone Number *</label>
                 <input type="tel" id="phone" name="Phone" class="form-control" placeholder="+91 00000 00000" required>
+                <div class="form-error" id="phone-error">This field is required</div>
               </div>
               <div class="form-group">
                 <label for="service" class="form-label">Service Interested In *</label>
@@ -199,6 +202,7 @@
                   <option value="Branding & Creative">Branding & Creative</option>
                   <option value="General Question">Other / General Inquiry</option>
                 </select>
+                <div class="form-error" id="service-error">Please select a service</div>
               </div>
             </div>
             
@@ -288,9 +292,25 @@
         form.addEventListener('submit', async (e) => {
           e.preventDefault(); // Stop standard redirect
           
-          // Strict validation check to ensure no blanks bypass the browser
-          if (!form.checkValidity()) {
-            form.reportValidity();
+          // Custom Premium Validation
+          let isValid = true;
+          document.querySelectorAll('#contact-form .form-control[required]').forEach(input => {
+            const errorDiv = input.nextElementSibling;
+            if (!input.value.trim() || (input.type === 'email' && !input.value.includes('@'))) {
+              isValid = false;
+              input.classList.add('error');
+              if (errorDiv && errorDiv.classList.contains('form-error')) {
+                errorDiv.style.display = 'block';
+              }
+            } else {
+              input.classList.remove('error');
+              if (errorDiv && errorDiv.classList.contains('form-error')) {
+                errorDiv.style.display = 'none';
+              }
+            }
+          });
+          
+          if (!isValid) {
             return;
           }
           
