@@ -288,6 +288,12 @@
         form.addEventListener('submit', async (e) => {
           e.preventDefault(); // Stop standard redirect
           
+          // Strict validation check to ensure no blanks bypass the browser
+          if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+          }
+          
           const btn = document.getElementById('submit-btn');
           const originalText = btn.innerHTML;
           btn.innerHTML = 'Sending...';
