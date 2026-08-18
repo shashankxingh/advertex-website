@@ -92,72 +92,7 @@
     </div>
   </section>
 
-  <!-- ========================= FOUNDERS ========================= -->
-  <section class="section section-bg-light" id="founders">
-    <div class="container">
-      <div class="reveal-up text-center">
-        <span class="section-label">THE TEAM</span>
-        <h2 class="section-title">Meet the Founders</h2>
-      </div>
-
-      <div class="founders-list">
-        <!-- Shashank Singh -->
-        <div class="founder-bio-card reveal-up" style="transition-delay: 0.1s;">
-          <div class="founder-image">
-            <svg class="founder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          </div>
-          <div class="founder-info">
-            <h3 class="founder-name">Shashank Singh</h3>
-            <span class="founder-role">Co-Founder</span>
-              <p class="founder-bio-text">
-              Shashank drives the technical strategy at Advertex Studio. From advanced SEO and web development to chat automation and email marketing, he builds the systems that scale revenue.
-            </p>
-
-            <div class="founder-expertise">
-              <h4>Core Expertise</h4>
-              <div class="expertise-tags">
-                <span class="expertise-tag">SEO</span>
-                <span class="expertise-tag">Social Media Marketing</span>
-                <span class="expertise-tag">Meta Ads</span>
-                <span class="expertise-tag">Web Development</span>
-                <span class="expertise-tag">Video Editing</span>
-                <span class="expertise-tag">Chat Automation</span>
-                <span class="expertise-tag">Email Marketing</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Harsh Gupta -->
-        <div class="founder-bio-card reveal-up" style="transition-delay: 0.2s;">
-          <div class="founder-image">
-            <svg class="founder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          </div>
-          <div class="founder-info">
-            <h3 class="founder-name">Harsh Gupta</h3>
-            <span class="founder-role">Co-Founder</span>
-              <p class="founder-bio-text">
-              Harsh is the creative and performance engine of the agency. He bridges high-converting Meta and Google Ads with compelling video production and Canva design to drive maximum ROI.
-            </p>
-
-            <div class="founder-expertise">
-              <h4>Core Expertise</h4>
-              <div class="expertise-tags">
-                <span class="expertise-tag">Social Media Marketing</span>
-                <span class="expertise-tag">Meta Ads</span>
-                <span class="expertise-tag">Google Ads</span>
-                <span class="expertise-tag">Video Shooting & Editing</span>
-                <span class="expertise-tag">Canva Design</span>
-                <span class="expertise-tag">Performance Marketing</span>
-                <span class="expertise-tag">Business Training</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  
   <!-- ========================= THE ADVERTEX BLOG ========================= -->
   <section class="section" id="blog">
     <div class="container reveal-up">
@@ -200,7 +135,96 @@
     </div>
   </section>
 
-  <!-- ========================= CTA BANNER ========================= -->
+    <!-- ========================= FOUNDERS ========================= -->
+  <section class="section section-bg-light" id="founders">
+    <div class="container">
+      <div class="reveal-up text-center">
+        <span class="section-label">THE TEAM</span>
+        <h2 class="section-title">Meet the Founders</h2>
+      </div>
+      
+      <div class="founders-list-compact">
+        <!-- Shashank Singh -->
+        <div class="founder-card reveal-up" style="transition-delay: 0.1s;" onclick="openFounderModal('shashank')">
+          <div class="founder-card-img">
+            <svg class="founder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </div>
+          <h3 class="founder-name">Shashank Singh</h3>
+          <span class="founder-role">Co-Founder</span>
+          <div class="founder-expertise-short">
+            <span class="expertise-tag-sm">Technical Strategy</span>
+            <span class="expertise-tag-sm">SEO</span>
+            <span class="expertise-tag-sm">Web Dev</span>
+          </div>
+          <button class="btn btn-outline" style="margin-top: 20px; width: 100%; border-radius: 50px;">Read Bio &rarr;</button>
+        </div>
+
+        <!-- Harsh Gupta -->
+        <div class="founder-card reveal-up" style="transition-delay: 0.2s;" onclick="openFounderModal('harsh')">
+          <div class="founder-card-img">
+            <svg class="founder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </div>
+          <h3 class="founder-name">Harsh Gupta</h3>
+          <span class="founder-role">Co-Founder</span>
+          <div class="founder-expertise-short">
+            <span class="expertise-tag-sm">Creative & Ads</span>
+            <span class="expertise-tag-sm">Meta Ads</span>
+            <span class="expertise-tag-sm">Video</span>
+          </div>
+          <button class="btn btn-outline" style="margin-top: 20px; width: 100%; border-radius: 50px;">Read Bio &rarr;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder Modals -->
+  <div id="modal-shashank" class="modal-overlay">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeFounderModal('shashank')">&times;</span>
+      <h3 class="founder-name">Shashank Singh</h3>
+      <span class="founder-role">Co-Founder</span>
+      <p class="founder-bio-text" style="margin-top: 1.5rem;">
+        Shashank drives the technical strategy at Advertex Studio. From advanced SEO and web development to chat automation and email marketing, he builds the systems that scale revenue.
+      </p>
+      <div class="founder-expertise">
+        <h4>Core Expertise</h4>
+        <div class="expertise-tags">
+          <span class="expertise-tag">SEO</span>
+          <span class="expertise-tag">Social Media Marketing</span>
+          <span class="expertise-tag">Meta Ads</span>
+          <span class="expertise-tag">Web Development</span>
+          <span class="expertise-tag">Video Editing</span>
+          <span class="expertise-tag">Chat Automation</span>
+          <span class="expertise-tag">Email Marketing</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-harsh" class="modal-overlay">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeFounderModal('harsh')">&times;</span>
+      <h3 class="founder-name">Harsh Gupta</h3>
+      <span class="founder-role">Co-Founder</span>
+      <p class="founder-bio-text" style="margin-top: 1.5rem;">
+        Harsh is the creative and performance engine of the agency. He bridges high-converting Meta and Google Ads with compelling video production and Canva design to drive maximum ROI.
+      </p>
+      <div class="founder-expertise">
+        <h4>Core Expertise</h4>
+        <div class="expertise-tags">
+          <span class="expertise-tag">Social Media Marketing</span>
+          <span class="expertise-tag">Meta Ads</span>
+          <span class="expertise-tag">Google Ads</span>
+          <span class="expertise-tag">Video Shooting & Editing</span>
+          <span class="expertise-tag">Canva Design</span>
+          <span class="expertise-tag">Performance Marketing</span>
+          <span class="expertise-tag">Business Training</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- ========================= CTA BANNER ========================= -->
   <section class="dark-banner reveal" id="cta">
     <div class="container">
       <h2 class="section-title">Ready to scale?</h2>
@@ -278,5 +302,23 @@
   </a>
 
   <script src="main.js"></script>
+
+  <script>
+    function openFounderModal(id) {
+      document.getElementById('modal-' + id).classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeFounderModal(id) {
+      document.getElementById('modal-' + id).classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    // Close modal on click outside
+    window.addEventListener('click', function(event) {
+      if (event.target.classList.contains('modal-overlay')) {
+        event.target.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
 </body>
 </html>
